@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container mb-5">
+
+    <h1> Is Owning A Pet Worth It?</h1>
+
+    <img height="200px" src="https://i.cbc.ca/1.5077459.1553886010!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/pets.jpg" alt="">
+
+    <p> Owning a pet is so common that more often than not when you speak ask someone, they'll tell you that they've owned a pet
+        at some point in their lives. Some people love their pets so much they consider them as family members. On that note, people
+        go to great lengths to take care of their pets but rarely think of the ways their pets take care of them. For eample, it's 
+        been said that people who own pets are usually in better health than those who don't. Is that really the case though? I've
+        done some digging and below are my findings.
+    </p>
+
+    <form class="my-3">
+        <input type="text" placeholder="Pro" id="pro" />
+        <input type="text" placeholder="Con" id="con" />
+        <button id="button" class="btn btn-primary" >Submit</button>
+    </form>
+
+    <table class="t-chart">
+        <thead>
+        <tr>
+            <th>Pros</th>
+            <th>Cons</th>
+        </tr>
+    </thead>
+    <tbody id="data">
+        <tr>
+            <td>Pets such as dogs improve one's physical health such as cholesterol 
+                and blood pressure due to their requiring daily
+                walks which is good for the owner.
+            </td>
+            <td>Pets such as rodents and cats can be especially harmful to pregnant
+                people due to diseases they csn expose them to.
+            </td>
+        </tr>
+        <tr>
+            <td>Pets improve one's mental health by giving their owners more circumstances 
+                to talk to other people.
+            </td>
+            <td>Owning a pet can expose you to allergens.
+            </td>
+        </tr>
+        <tr>
+            <td>The responsibility that comes with having to take care of a pet causes their 
+                owner to keep up with a daily routine.
+            </td>
+            <td>Owning a pet can be expensive. Depending on the type of pet and its size,
+                a pet owner can spend hundreds or thousands of dollars a year.
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    
+    
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

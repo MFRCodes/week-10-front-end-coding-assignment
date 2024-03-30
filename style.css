@@ -1,0 +1,11 @@
+.t-chart {
+    width: 75%;
+    border-collapse: collapse;
+    table-layout:fixed
+}
+
+.t-chart th, .t-chart td {
+    border: 1px solid brown;
+    text-align: left;
+    padding: 3px;
+}
