@@ -1,31 +1,36 @@
+let id = 0;
 
-let button = document.getElementById("button")
-button.addEventListener('click', function(event){
-    // prevents default actions for the form
-    event.preventDefault();
+document.getElementById('add').addEventListener('click', () => {
+    let table = document.getElementById('info');
+    let row = table.insertRow(); 
+    row.setAttribute('id', `item-${id}`);
+    row.insertCell(0).innerHTML = document.getElementById('pro').value;
+    row.insertCell(1).innerHTML = document.getElementById('con').value;
+    let actions = row.insertCell(2);
+    actions.appendChild(createDeleteButton(id));
+    document.getElementById('pro').value = '';
+    document.getElementById('con').value = ''; 
+    id++;
+});
 
-    // gets values from the input elements
-    let pro = document.getElementById("pro").value;
-    let con = document.getElementById("con").value;
-    console.log(pro, con)
-    
-    // create elements to put data in before appending to table
-    let row = document.createElement("tr");
-    let cell1 = document.createElement("td");
-    let cell2 = document.createElement("td");
+// I initialized the Javascript by defining a variable named "id" and assigning it the value of zero. On line 3, 
+// the "EventListener" on the button is created. Once the button is clicked, the code on lines 4-13 runs. On lines 4-13,
+// new rows and cells are created and added to the table. Line 10, is what allows users to delete what they've
+// inserted to the table.
 
-    // adding data to inner HTML of cell 1 and cell 2
-    cell1.innerHTML = pro;
-    cell2.innerHTML = con;
+function createDeleteButton(rowId) {
+    let btn = document.createElement('button');
+    btn.className = 'btn btn-primary';
+    btn.innerHTML = 'Delete';
+    btn.onclick = () => {
+        console.log(`Deleting row with id: item-${rowId}`);
+        let elementToDelete = document.getElementById(`item-${rowId}`);
+        elementToDelete.parentNode.removeChild(elementToDelete);
+    };
+    return btn;
+}
 
-    // add cells to row
-    row.append(cell1, cell2);
-
-    // get table add row with cells attached to it
-    let table = document.getElementById("data");
-    table.append(row);
-
-    // clear form inputs. 
-    document.getElementById("pro").value = "";
-    document.getElementById("con").value = "";
-})
+// Lines 21-31 is what creates the "delete" button. The code starts off with the function "createDeleteButton" being declared
+// and it uses "rowID" as its parameter. On lines 22-24, a new button is made and assigned the name "btn btn-primary". On lines
+// 25-30, once a user clicks the "delete" button, the "onclick" event will take place and any rows that need to be deleted will
+// be deleted because the row will be taken away from the DOM.

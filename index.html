@@ -3,28 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 10 Project</title>
+    <title>Week 10 Assignment</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="container mb-5">
+<body class="container mb-4">
 
-    <h1> Is Owning A Pet Worth It?</h1>
+    <h1> Is Owning A Pet Worth It?</h1>  
+    <!-- Line 12 uses the h1 HTML tag so that I could write the title of my website. -->
 
     <img height="200px" src="https://i.cbc.ca/1.5077459.1553886010!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/pets.jpg" alt="">
 
+    <!-- Line 15 uses the image HTML tag so that I could insert an image for my website and I used the height tag
+    to adjust the size of the image.  -->
+
     <p> Owning a pet is so common that more often than not when you speak ask someone, they'll tell you that they've owned a pet
         at some point in their lives. Some people love their pets so much they consider them as family members. On that note, people
-        go to great lengths to take care of their pets but rarely think of the ways their pets take care of them. For eample, it's 
+        go to great lengths to take care of their pets but rarely think of the ways their pets take care of them. For example, it's 
         been said that people who own pets are usually in better health than those who don't. Is that really the case though? I've
         done some digging and below are my findings.
     </p>
+    <!-- The "p" tag is the paragraph tag and I used it to write the paragraph on my website. -->
+   
+    <div class="row">
+        <div class="col-sm">
+          <input type="text" class="my-4" placeholder="Pro" id="pro">
+        </div>
+        <div class="col-sm">
+          <input type="text" class="my-4" placeholder="Con" id="con">
+          <button id="add" class="btn btn-primary" >Submit</button>
+        </div>
+    </div>
 
-    <form class="my-3">
-        <input type="text" placeholder="Pro" id="pro" />
-        <input type="text" placeholder="Con" id="con" />
-        <button id="button" class="btn btn-primary" >Submit</button>
-    </form>
+    <!-- On lines 28-36, I created a form with a submission button by using HTML and Bootstrap. Line 28 is what allows  
+   rows to be created. "col-sm" are used to create columns. lines 30 and 33 allow users to type their pro and con into the form.
+   Line 34 creates the button. -->
+    
+        
 
     <table class="t-chart">
         <thead>
@@ -33,14 +48,17 @@
             <th>Cons</th>
         </tr>
     </thead>
-    <tbody id="data">
+
+    <!-- lines 44-50 create the top of the table. I used the HTML tags and a Bootstrap class to create it. "thead" is for putting
+    the header in the table into groups. "tr" is for the rows in the table. And, "th" is for each individual header. -->
+    <tbody id="info">
         <tr>
             <td>Pets such as dogs improve one's physical health such as cholesterol 
                 and blood pressure due to their requiring daily
                 walks which is good for the owner.
             </td>
             <td>Pets such as rodents and cats can be especially harmful to pregnant
-                people due to diseases they csn expose them to.
+                people due to diseases they can expose them to.
             </td>
         </tr>
         <tr>
@@ -60,8 +78,18 @@
         </tr>
     </tbody>
     </table>
+
+    <!-- In lines 54-80, the body of the table is created using "tbody" to put the details of the table into groups.
+    "tr" is used to create the rows. And "td" is used to create the information going into the table.-->
     
     
+<!-- Sources for my information: https://www.cdc.gov/healthypets/keeping-pets-and-people-healthy/how.html#:~:text=They%20can%20increase%20opportunities%20to,have%20at%20least%20one%20pet.
+https://www.health.harvard.edu/heart-health/the-heartfelt-benefits-of-pet-ownership
+https://health.clevelandclinic.org/why-having-a-pet-of-any-kind-may-boost-your-mood-and-keep-your-brain-healthy
+https://anticruelty.org/pet-library/estimated-annual-cost-owning-pet
+ -->
+
+
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>

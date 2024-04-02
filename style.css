@@ -4,8 +4,16 @@
     table-layout:fixed
 }
 
+/* I adjusted the width of the table to 75% because that's what felt the most fitting. The "border-collapse" and 
+the "table-layout" settings were chosen so that the table could have a set and polished structure and look. */
+
 .t-chart th, .t-chart td {
     border: 1px solid brown;
     text-align: left;
     padding: 3px;
 }
+
+/* I decided to make the border of the website brown so that there would be some contrast between it and the text.
+I decided to have the text align to the left as I think that's a more polished look compared to the other options.
+Lastly, I decided to set the padding to 3px because I felt like that's the setting that makes it easy for a user to
+read the text. */
